@@ -49,7 +49,7 @@ ROOT_URLCONF = 'aerofacil_sistema.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'core' / 'templates'],  # Caminho corrigido
+        'DIRS': [BASE_DIR / 'templates'],  # <--- AQUI A MUDANÇA
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
