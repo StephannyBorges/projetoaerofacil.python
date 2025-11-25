@@ -6,7 +6,7 @@ import sys
 def main():
     """Run administrative tasks."""
     # Aqui apontamos para a pasta de configurações
-    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'aerofacil_sistema.settings')
+    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'setup.settings')
     try:
         from django.core.management import execute_from_command_line
     except ImportError as exc:

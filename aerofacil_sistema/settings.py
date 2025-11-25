@@ -63,7 +63,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'aerofacil_sistema.wsgi.application'
+WSGI_APPLICATION = 'setup.wsgi.application'
 
 
 # Database
