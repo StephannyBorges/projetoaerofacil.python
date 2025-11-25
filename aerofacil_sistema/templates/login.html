@@ -221,7 +221,13 @@
                         <input type="number" class="form-control" value="1" min="1">
                     </div>
                 </div>
-
+            </form>
+            <form action="{% url 'confirmacao' %}" method="POST">
+    
+                {% csrf_token %} <div class="form-grid">
+                     ...
+                </div>
+            
                 <button type="submit" class="btn-buscar">
                     🔍 Buscar Viagem
                 </button>
