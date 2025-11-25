@@ -10,7 +10,6 @@
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Roboto', sans-serif; }
         
         body {
-            /* Mantendo o mesmo fundo */
             background-image: url("{% static 'fundo_aviao.jpg' %}");
             background-size: cover;
             background-position: center;
@@ -38,22 +37,32 @@
         h2 { color: #007bff; margin-bottom: 20px; }
         p { color: #555; margin-bottom: 30px; line-height: 1.6; }
 
-        .btn-confirmar {
-            background-color: #28a745; /* Verde para confirmar */
-            color: white;
+        /* Container para os botões ficarem lado a lado */
+        .btn-container {
+            display: flex;
+            justify-content: center;
+            gap: 15px; /* Espaço entre os botões */
+        }
+
+        .btn {
             text-decoration: none;
             padding: 15px 30px;
             border-radius: 6px;
             font-weight: bold;
-            display: inline-block;
+            color: white;
+            transition: background 0.3s;
         }
-        
+
+        .btn-confirmar {
+            background-color: #28a745; /* Verde */
+        }
+        .btn-confirmar:hover { background-color: #218838; }
+
         .btn-voltar {
-            color: #777;
-            text-decoration: none;
-            margin-left: 20px;
-            font-size: 14px;
+            background-color: #007bff; /* AZUL (Como pedido) */
         }
+        .btn-voltar:hover { background-color: #0056b3; }
+
     </style>
 </head>
 <body>
@@ -66,8 +75,11 @@
         </p>
         <p><strong>Deseja prosseguir para a reserva?</strong></p>
         
-        <a href="#" class="btn-confirmar">Confirmar Reserva</a>
-        <a href="{% url 'login' %}" class="btn-voltar">Voltar</a>
+        <div class="btn-container">
+            <a href="{% url 'detalhes' %}" class="btn btn-confirmar">Confirmar Reserva</a>
+            
+            <a href="{% url 'login' %}" class="btn btn-voltar">Voltar</a>
+        </div>
     </div>
 
 </body>
